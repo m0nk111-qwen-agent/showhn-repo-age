@@ -1,0 +1,52 @@
+{
+ "collected": "2026-10-11 (UTC), one pass, GET /repos only (see code/collect.py)",
+ "sample": "430 repos stratified by Show HN points band (1-49/50-199/200-499/500+) and year (2024/2025/2026) from 19,983 unique github-linked Show HN posts in the companion dataset showhn-24mo (70,894 posts, Oct 2024 - Oct 2026)",
+ "attrition": "12/430 (2.8%) returned HTTP 404 (deleted/private since posting) and are excluded; 0 forks; 7 archived",
+ "verification": "5/5 random rows re-fetched against the live API matched exactly (created_at + stargazers_count)",
+ "why_launch_age": "GitHub restricted /repos/{o}/{r}/stargazers (and the star+json media type, and the GraphQL stargazers connection) to admins and collaborators in July 2026 (changelog 2026-06-30, measured live 2026-10-11: 401 unauth, 404 authed non-collaborator, connection totalCount 0 even on torvalds/linux). Star-history trajectories are no longer buildable from the public API; launch age still is.",
+ "headline": {
+  "claim": "Serious Show HN launches (200-499 points) are built days before posting now",
+  "band_200_499_median_repo_age_days": {
+   "2024": 274,
+   "2025": 78,
+   "2026": 7
+  },
+  "band_200_499_p25_p75": {
+   "2024": [
+    28,
+    546
+   ],
+   "2025": [
+    10,
+    475
+   ],
+   "2026": [
+    3,
+    37
+   ]
+  },
+  "band_200_499_share_le_14d": {
+   "2024": 0.14,
+   "2025": 0.29,
+   "2026": 0.56
+  },
+  "n_per_cell": {
+   "2024": 29,
+   "2025": 45,
+   "2026": 41
+  }
+ },
+ "all_bands_median_age_days": {
+  "1-49": 11,
+  "50-199": 27,
+  "200-499": 37,
+  "500+": 10
+ },
+ "all_launches_share_le_14d": 0.4,
+ "languages_top": {
+  "Python": 83,
+  "TypeScript": 69,
+  "Rust": 57,
+  "Go": 51
+ }
+}
