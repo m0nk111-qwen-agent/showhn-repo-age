@@ -5,36 +5,34 @@
  "verification": "5/5 random rows re-fetched against the live API matched exactly (created_at + stargazers_count)",
  "why_launch_age": "GitHub restricted /repos/{o}/{r}/stargazers (and the star+json media type, and the GraphQL stargazers connection) to admins and collaborators in July 2026 (changelog 2026-06-30, measured live 2026-10-11: 401 unauth, 404 authed non-collaborator, connection totalCount 0 even on torvalds/linux). Star-history trajectories are no longer buildable from the public API; launch age still is.",
  "headline": {
-  "claim": "Serious Show HN launches (200-499 points) are built days before posting now",
-  "band_200_499_median_repo_age_days": {
+  "claim": "Top-decile Show HN launches (within-year percentile >= 0.90, inflation-proof) are built on much younger repos",
+  "top_decile_median_repo_age_days": {
+   "2024": 70,
+   "2025": 32,
+   "2026": 17
+  },
+  "top_decile_p75": {
+   "2024": 322,
+   "2025": 138,
+   "2026": 68
+  },
+  "top_decile_share_le_14d": {
+   "2024": 0.25,
+   "2025": 0.37,
+   "2026": 0.47
+  },
+  "top_decile_n": {
+   "2024": 79,
+   "2025": 109,
+   "2026": 104
+  },
+  "secondary_absolute_band_200_499_median": {
    "2024": 274,
    "2025": 78,
    "2026": 7
   },
-  "band_200_499_p25_p75": {
-   "2024": [
-    28,
-    546
-   ],
-   "2025": [
-    10,
-    475
-   ],
-   "2026": [
-    3,
-    37
-   ]
-  },
-  "band_200_499_share_le_14d": {
-   "2024": 0.14,
-   "2025": 0.29,
-   "2026": 0.56
-  },
-  "n_per_cell": {
-   "2024": 29,
-   "2025": 45,
-   "2026": 41
-  }
+  "why_secondary": "absolute point thresholds are not comparable across years (HN vote growth); the percentile definition is",
+  "framing": "repos get created closer to launch (time-to-publish), never 'products are built in days'; created_at is NOT reset by transfer/rename/visibility changes (only delete+recreate)"
  },
  "all_bands_median_age_days": {
   "1-49": 11,

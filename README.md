@@ -4,18 +4,25 @@ A 430-repo stratified sample measuring **repo age at Show HN launch**, built fro
 dataset of 70,894 Show HN posts (`showhn-24mo`), with every row re-verified against the live
 GitHub API. The finding that survived verification:
 
-**Serious Show HN launches (200–499 points) collapsed from a median 274-day-old repo (2024) to a
-7-day-old repo (2026).** p75 went from 546 days to 37. Share of launches ≤14 days old in that
-band: 14% → 29% → 56%.
+**Top-decile Show HN launches now happen on repos a median 17 days old — down from 70 days in
+2024.** (Within-year point percentile ≥ 0.90, so HN vote growth can't fake the trend; n = 79/109/104.)
+Share of top-decile launches on repos ≤14 days old: 25% → 37% → 47%.
 
-| 200–499-point posts | 2024 (n=29) | 2025 (n=45) | 2026 (n=41) |
+| top-decile posts | 2024 (n=79) | 2025 (n=109) | 2026 (n=104) |
 |---|---|---|---|
-| median repo age at post | 274d | 78d | 7d |
-| p25 / p75 | 28d / 546d | 10d / 475d | 3d / 37d |
-| share ≤14d | 14% | 29% | 56% |
+| median repo age at post | 70d | 32d | 17d |
+| p75 | 322d | 138d | 68d |
+| share ≤14d | 25% | 37% | 47% |
 
-The "build a repo for the HN moment" behavior used to be the small-time pattern (sub-50-point
-launches were always fresh: 55% ≤14d across all years). In 2026 it is the *serious-post* pattern.
+A secondary, absolute-band view (200–499 points) shows a much bigger swing — median 274d → 7d —
+but absolute point thresholds are not comparable across years (HN's vote base grew), so we treat
+the percentile-normalized numbers as the headline and the band table as supporting evidence.
+
+The "create the repo right before asking HN" behavior used to be the small-time pattern (sub-50-point
+launches were always fresh: 55% ≤14d, flat across all years). It is now the top-decile pattern too.
+Read it as **time-to-publish shrinking**: repos get created closer to launch — not "products are
+built in days" (transfers, renames and visibility changes do not reset `created_at`; only
+delete-and-recreate does, which is itself part of the same launch playbook).
 
 ## Why launch age (and not star trajectories)?
 
