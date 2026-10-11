@@ -14,7 +14,7 @@ The fresh-launch behavior isn't new. Sub-50-point posts were always fresh (55% �
 
 What we can't claim:
 
-- `created_at` is not "work started". Some fresh repos are shells prepared for launch; some old ones were quiet for years before their owner pressed publish. We measure the repo's public existence, because that's the moment the owner chose to create before asking HN for attention — and that moment moved by nine months.
+- `created_at` is not "work started". Read every number here as time-to-publish: repos get created closer to launch, not products built in days. Transfers, renames and visibility changes do not reset `created_at` (only delete-and-recreate does — which is itself part of the same launch playbook). Some old repos were quiet for years before their owner pressed publish.
 - Composition may have shifted with content (2026's serious band skews toward AI apps vs 2024's devtools). The within-band, within-year numbers are clean, but we can't rule out that the *kind* of thing that gets 200 points changed too.
 - 41 rows in the 2026 cell. It's a sample. The tables are in the repo.
 
